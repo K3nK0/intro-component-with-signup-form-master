@@ -1,0 +1,155 @@
+:root {
+--redColor: hsl(0, 100%, 74%);
+--greenColor: hsl(154, 59%, 51%);
+--blueColor: hsl(248, 32%, 49%);
+--darkBlueColor: hsl(249, 10%, 26%);
+--grayishBlueColor: hsl(246, 25%, 77%);
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Poppins;
+    font-size: 16px;
+    background-color: var(--redColor);
+    background-image: url(images/bg-intro-desktop.png);
+    background-position: center;
+}
+.container {
+    display: flex;
+    /* gap: 3%; */
+    position: relative;
+    height: 100%;
+}
+section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 50%;
+    padding: 30px;
+}
+
+.text-description {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    position: relative;
+    /* background: lightblue; */
+    max-width: 600px;
+    height: auto;
+    color: white;
+    font-weight: 500;
+}
+.text-description h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+.form {
+    max-width: 600px;
+}
+.try {
+    height: 60px;
+    background: var(--blueColor);
+    border-radius: 8px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 7px 0 rgba(0, 0, 0, .2);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    /* height: 600px; */
+    border-radius: 8px;
+    box-shadow: 0 7px 0 rgba(0, 0, 0, .2);
+    padding: 40px;
+    text-align: center;
+}
+form input, form button {
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    /* outline: none; */
+}
+form input {
+    font-weight: 600;
+    font-size: 17px;
+}
+form input::placeholder {
+    font-weight: 700;
+}
+form button {
+    text-transform: uppercase;
+    color: white;
+    background: var(--greenColor);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgb(1, 173, 1);
+}
+form button:hover {
+    background: rgba(85, 229, 85, 0.518);
+}
+form p {
+    color: var(--grayishBlueColor);
+    font-size: 12px;
+}
+form p strong {
+    color: var(--redColor);
+}
+
+@media only screen and (max-width: 760px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section {
+        width: auto;
+    }
+    .text-description {
+        text-align: center;
+        margin: 50px 0;
+        padding-top: 28px;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .text-description h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (max-width: 460px) {
+    
+    .text-description {
+        margin: 10px 0;
+        padding: 0;
+    }
+    .text-description h1 {
+        font-size: 30px;
+    }
+    .form {
+        width: 100%;
+    }
+}
