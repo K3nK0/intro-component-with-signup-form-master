@@ -78,38 +78,74 @@ form {
     text-align: center;
 }
 form input, form button {
+    position: relative;
     padding: 20px 30px;
-    margin-bottom: 20px;
+
     border: 2px solid rgba(0, 0, 0, .1);
     border-radius: 5px;
     /* outline: none; */
 }
 form input {
+    width: 100%;
     font-weight: 600;
     font-size: 17px;
+}
+form input.input-error {
+    border-color: var(--redColor);
 }
 form input::placeholder {
     font-weight: 700;
 }
-form button {
+form .field button {
     text-transform: uppercase;
     color: white;
     background: var(--greenColor);
+    width: 100%;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 0 rgb(1, 173, 1);
 }
 form button:hover {
-    background: rgba(85, 229, 85, 0.518);
+    background: rgba(85, 229, 143, 0.518);
 }
-form p {
-    color: var(--grayishBlueColor);
-    font-size: 12px;
+.field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
 }
-form p strong {
+.icon-error {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20%;
+}
+.icon-error.iconError {
+    display: block;
+}
+
+.text-error {
     color: var(--redColor);
+    float: right;
+    margin-top: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    font-style: italic;
+    display: none;
 }
+.text-error.textError {
+    display: block;
+}
+#terms {
+    color: var(--grayishBlueColor);
+    font-size: 11px;
+    font-weight: 600;
+}
+#terms strong{
+    color: var(--redColor);
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width: 760px) {
 

@@ -42,21 +42,37 @@
 
       <form>
 
-        <!-- <label for="firstName">First name</label> -->
-        <input type="text" id="firstName" required placeholder="First Name" maxlength="16" pattern="[a-zA-Z]+">
+        <div class="field firstNameField">
+          <input type="text" placeholder="First Name">
+          <i class="icon-error"><img src="images/icon-error.svg" alt=""></i>
+          <p class="text-error">First Name cannot be empty</p>
+        </div>
 
-        <!-- <label for="lastName">Last name</label> -->
-        <input type="text" id="lastName" required placeholder="Last Name" pattern="[a-zA-Z]+">
+        <div class="field lastNameField">
+          <input type="text" placeholder="Last Name">
+          <i class="icon-error"><img src="images/icon-error.svg" alt=""></i>
+          <p class="text-error">Last Name cannot be empty</p>
+        </div>
 
-        <!-- <label for="email">Email Address</label> -->
-        <input type="email" id="email" required placeholder="Email Address">
+        <div class="field emailField">
+          <input type="text" placeholder="Email Address">
+          <i class="icon-error"><img src="images/icon-error.svg" alt=""></i>
+          <p class="text-error">Looks like this is not an email</p>
+        </div>
 
-        <!-- <label for="password">Password</label> -->
-        <input type="password" id="password" required placeholder="Password">
+        <div class="field password">
+          <input type="password" placeholder="Password">
+          <i class="icon-error"><img src="images/icon-error.svg" alt=""></i>
+          <p class="text-error">Password cannot be empty</p>
+        </div>
 
-        <button type="submit">Claim your free trial</button>
+        
+        <div class="field">
+          <button type="submit">Claim your free trial</button>
+        </div>
+        
 
-        <p>By clicking the button, you are agreeing to our <strong>Terms and Services</strong></p>
+        <p id="terms">By clicking the button, you are agreeing to our <strong>Terms and Services</strong></p>
 
       </form>
 
@@ -70,5 +86,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+
+  <script src="app.js"></script>
 </body>
 </html>
